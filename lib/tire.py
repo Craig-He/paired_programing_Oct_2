@@ -21,3 +21,9 @@ class Tire:
         history.append(self.current)
 
         return history
+
+class TireAlreadyExistsError(Exception):
+    pass
+
+class TireNotFoundError(Exception):
+    pass

@@ -1,7 +1,8 @@
 import datetime
 import pytest
 from lib.tire_data import TireData
-from lib.tire import Tire
+from lib.tire import Tire, TireAlreadyExistsError
+from lib.car import *
 
 
 def test_for_TireData_object():
@@ -67,7 +68,7 @@ def test_for_car_overview():
     )
     assert (
         car.car_overview()
-        == "Tire 'front-left': pressure: 24.1, tread_depth: 7.2, timestamp: 2026-10-2 12:30\nTire 'front-right': pressure: 23.3, tread_depth: 6, timestamp: 2026-10-2 12:30"
+        == "Tire 'front-left': pressure: 24.1, tread_depth: 7.2, timestamp: 10/02/26 12:30:00\nTire 'front-right': pressure: 23.3, tread_depth: 6, timestamp: 10/02/26 12:30:00\n"
     )
 
 
@@ -89,5 +90,5 @@ def test_for_tire_history():
     )
     assert (
         car.tyre_history("front-left")
-        == "pressure: 24.1, tread_depth: 7.2, timestamp: 2026-10-2 12:30\npressure: 23.3, tread_depth: 6, timestamp: 2026-10-20 12:30"
+        == "pressure: 24.1, tread_depth: 7.2, timestamp: 10/02/26 12:30:00\npressure: 23.3, tread_depth: 6, timestamp: 10/20/26 12:30:00\n"
     )
