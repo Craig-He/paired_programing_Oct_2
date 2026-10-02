@@ -47,7 +47,7 @@ class Tire:
         self.current = TireData
         self.history = [TireData, TireData]
 
-    def add_reading(self, pressure, tread_depth, timestamp):
+    def add_reading(self, tire_data):
         # append current to history
         # set current to new data
 
