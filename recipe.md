@@ -33,6 +33,10 @@ class Car:
     def tire_history(self, position):
         # print the reading history for that tire
         # throw error if position doesn't exist
+    
+    def add_tire_reading(self, position, pressure, tread_depth, timestamp)
+        #call the add tire reading to the relevant tire object indicated by the position parameter
+        # tire data is are passed into the add_reading method
 
     
 
