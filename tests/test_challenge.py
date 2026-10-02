@@ -89,6 +89,6 @@ def test_for_tire_history():
         "front-left", 23.3, 6, datetime.datetime(2026, 10, 20, 12, 30, 0)
     )
     assert (
-        car.tyre_history("front-left")
+        car.tire_history("front-left")
         == "pressure: 24.1, tread_depth: 7.2, timestamp: 10/02/26 12:30:00\npressure: 23.3, tread_depth: 6, timestamp: 10/20/26 12:30:00\n"
     )
